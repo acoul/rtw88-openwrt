@@ -20,7 +20,7 @@ include $(INCLUDE_DIR)/kernel.mk
 include $(INCLUDE_DIR)/package.mk
 
 define Package/rtw88-backports-firmware
-  TITLE:= RealTek rtw88 firmware files
+  TITLE:= Realtek rtw88 firmware files
   SECTION:=firmware
   CATEGORY:=Firmware
   DEPENDS:=
@@ -30,6 +30,7 @@ RTW_AUTOLOAD := rtw_8821cu \
 		rtw_8822bu \
 		rtw_8822cu \
 		rtw_8812au \
+		rtw_8814au \
 		rtw_8821au \
 		rtw_8723du
 
@@ -51,6 +52,8 @@ define KernelPackage/rtw88-backports-usb
 	$(PKG_BUILD_DIR)/rtw_8821au.ko \
 	$(PKG_BUILD_DIR)/rtw_8812a.ko \
 	$(PKG_BUILD_DIR)/rtw_8812au.ko \
+	$(PKG_BUILD_DIR)/rtw_8814a.ko \
+	$(PKG_BUILD_DIR)/rtw_8814au.ko \
 	$(PKG_BUILD_DIR)/rtw_8723d.ko \
 	$(PKG_BUILD_DIR)/rtw_8723x.ko \
 	$(PKG_BUILD_DIR)/rtw_8723du.ko

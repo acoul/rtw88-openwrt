@@ -7,13 +7,11 @@ With this repo, you can build ready-to-use modules with the latest fixes for you
 
 ## Support
 - RTL8812AU
+- RTL8814AU
 - RTL8821AU
-- RTL8811AU
-- RTL8822BU
-- RTL8812BU
-- RTL8822CU
 - RTL8821CU
-- RTL8811CU
+- RTL8822BU
+- RTL8822CU
 - RTL8723DU
 
 ## Thanks
