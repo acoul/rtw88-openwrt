@@ -1,5 +1,7 @@
+compiles clean on an openwrt-sdk-25.12.2-mediatek-filogic_gcc-14.3.0_musl.Linux-x86_64
+
 # rtw88-openwrt 🚀
-Package and tools for [Linux rtw88](https://github.com/lwfinger/rtw88) driver for OpenWrt 23.05 and 24.10.
+Package and tools for [Linux rtw88](https://github.com/lwfinger/rtw88) driver for OpenWrt 23.05 and 24.10. (& 25.12.)
 
 With this repo, you can build ready-to-use modules with the latest fixes for your router. You can test patches from rtw88 devs too :)
 
