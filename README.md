@@ -1,5 +1,26 @@
 compiles clean on an openwrt-sdk-25.12.2-mediatek-filogic_gcc-14.3.0_musl.Linux-x86_64
 
+this is by far the best alternative package driver to the mainline openwrt series, at least for the >=25.12.2 releases
+
+as described on [issue #1](https://github.com/acoul/rtw88-openwrt/issues/1) the driver will rush to assign phy0 address to the usb device pushing back the internal wifi drivers to phy1 & phy2 in my case, which is not the ideal behavior for a usb hotplug wifi addapters. they need to come after the internal wifi adapters
+
+the workaround for this is to remove the:
+
+`/etc/modules.d/50-rtw88-backports-usb`
+
+and place the wanted modules to be loaded (with a delay) on `/etc/rc.local`, in my case:
+
+```
+sleep 20
+
+insmod rtw_core
+insmod rtw_usb
+insmod rtw_8822b
+insmod rtw_8822bu
+```
+
+
+
 # rtw88-openwrt 🚀
 Package and tools for [Linux rtw88](https://github.com/lwfinger/rtw88) driver for OpenWrt 23.05 and 24.10. (& 25.12.)
 
